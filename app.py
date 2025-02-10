@@ -42,8 +42,8 @@ def get_all_participants():
 
 
 with st.sidebar:
-    st.header("Powiedz nam coś o sobie")
-    st.markdown("Pomożemy Ci znaleźć osoby, które mają podobne zainteresowania")
+    st.header("Sprawdź do której grupy należysz!")
+    st.markdown("Zobacz ile osób ma podobne zainteresowania")
     age = st.selectbox("Wiek", ['<18', '18-24', '25-34', '35-44', '45-54', '55-64', '>=65', 'unknown'])
     edu_level = st.radio("Wykształcenie", ['Podstawowe', 'Średnie', 'Wyższe'])
     fav_animals = st.radio("Ulubione zwierzęta", ['Brak ulubionych', 'Psy', 'Koty', 'Inne', 'Koty i Psy'])
