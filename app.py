@@ -29,7 +29,7 @@ def get_model():
 
 @st.cache_data
 def get_cluster_names_and_descriptions():
-    with open(CLUSTER_NAMES_AND_DESCRIPTIONS, "r") as f:
+    with open(CLUSTER_NAMES_AND_DESCRIPTIONS, "r", encoding="utf-8") as f:
         return json.loads(f.read())
 
 @st.cache_data
