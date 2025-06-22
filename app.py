@@ -66,7 +66,14 @@ with st.sidebar:
 
 # Przed kliknięciem przycisku pokazujemy tekst zachęty
 if not show_results:
-    st.markdown(f"<h1 style='font-size: 35px;'>Hmmmmm.... Trudne, naprawdę trudne...</h1>", unsafe_allow_html=True)
+    st.markdown(
+    "<h1 style='font-size: 35px; text-align: center;'>🧙‍♂️ Tiara Przydziału 2 i ⅔ 🌀</h1>", 
+    unsafe_allow_html=True
+)
+    st.markdown(
+    "<h1 style='font-size: 30px; text-align: center;'>Hmmmmm.... Trudne, naprawdę trudne...</h1>", 
+    unsafe_allow_html=True
+)
     st.image("https://images.nightcafe.studio/jobs/wCkbew8LbK16eG9wOqvN/wCkbew8LbK16eG9wOqvN-O60Xk.jpeg?tr=w-1600,c-at_max")
     st.info("Wybierz swoje odpowiedzi i naciśnij przycisk 'Oczaruj mnie!', aby znaleźć grupę, do której najlepiej pasujesz!")
 
