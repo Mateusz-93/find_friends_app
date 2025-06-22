@@ -153,6 +153,8 @@ if show_results:
 
     # WYKRES KOŁOWY DLA WYKSZTAŁCENIA
     edu_level_counts = same_cluster_df["edu_level"].value_counts()
+    edu_level_counts = edu_level_counts[edu_level_counts > 0]  # Usuń zerowe wartości
+
     fig = px.pie(values=edu_level_counts, names=edu_level_counts.index, title="Wykształcenie")
     color_map = {
         'Podstawowe': 'yellow',  # Kolor dla podstawowego wykształcenia
@@ -168,11 +170,14 @@ if show_results:
             'font': {'size': 30}
         },
         legend=dict(
-            title="Wykształcenie",
-            font=dict(size=18, color="black"),
-            bgcolor="rgba(255, 255, 255, 1.5)",  # tło legendy
-            bordercolor="black",  # kolor ramki
-            borderwidth=1
+            title=dict(
+                text="Wykształcenie:",
+                font=dict(size=12, color="black")  # <--- Kolor tytułu legendy
+            ),
+        font=dict(size=18, color="black"),  # <--- Kolor wartości w legendzie
+        bgcolor="rgba(255, 255, 255, 1.5)",
+        bordercolor="black",
+        borderwidth=1
         )
     )
     fig.update_traces(
@@ -288,7 +293,10 @@ if show_results:
             'font': {'size': 30}
         },
         legend=dict(
-            title="Płeć",
+            title=dict(
+                text="Płeć:",
+                font=dict(size=12, color="black")  # <--- Kolor tytułu legendy
+            ),
             font=dict(size=18, color="black"),
             bgcolor="rgba(255, 255, 255, 1.5)",
             bordercolor="black",
